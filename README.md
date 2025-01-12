@@ -1,54 +1,49 @@
-# Stegnography-Based-Secure-File-Sharing
+Steganography and Encryption for Secure File Sharing
 
-This project demonstrates the process of embedding a file securely within an image using steganography techniques, along with encryption and decryption. The process involves:
-1)Encrypting a file.
-2)Embedding the encrypted file into a cover image (steganography).
-3)Decrypting the file after extraction from the image.
+Overview
+This project demonstrates the use of encryption and steganography to securely share files. The process involves encrypting a file, embedding it inside a cover image (steganography), and then securely extracting and decrypting it. The project uses Python libraries to handle both encryption and steganography, allowing users to send and receive encrypted files hidden inside an image.
 
-Files in the Repository:
-1)Decryption.ipynb: Jupyter notebook that demonstrates how to decrypt the hidden file.
-2)Encryption.ipynb: Jupyter notebook for encrypting a file and embedding it within an image.
-3)carrier.png: A sample image that serves as the cover image for hiding the encrypted file.
-4)extracted_file: The file that will be extracted after decryption from the stego image.
-5)key.key: The encryption key file used for file encryption and decryption.
-6)secret.docx: A sample document file that is being encrypted and embedded.
-7)stego_image.png: The final image with the encrypted file hidden within it.
+Files in this Repository:
+Decryption.ipynb: Jupyter Notebook that demonstrates how to extract and decrypt a file hidden inside a cover image.
+Encryption (1).ipynb: Jupyter Notebook to encrypt a file and embed it into a cover image using steganography.
+carrier.png: A sample cover image used to hide the encrypted file.
+extracted_file: The decrypted file after extraction from the stego image.
+key.key: The encryption key used for file encryption and decryption.
+secret.docx: A sample document file that is encrypted and hidden.
+stego_image.png: The final image with the hidden encrypted file embedded in it.
 
-Requirements:
-To run the notebooks and the script, you will need the following Python libraries:
-1)cryptography
-2)Pillow (for image manipulation)
-3)numpy
-4)matplotlib
-5)steghide or custom steganography tools
-You can install them using pip:
-pip install cryptography pillow numpy matplotlib
-
-How It Works:
-Step 1: Encrypt the File
-Use Encryption.ipynb to select the file (e.g., secret.docx) and encrypt it using a symmetric encryption algorithm.
-The key is saved as key.key to be used for decryption.
-Step 2: Embed the Encrypted File
-The encrypted file is then embedded into the image carrier.png using a steganographic algorithm.
-The result is a stego_image.png, which appears to be a regular image but contains hidden encrypted data.
-Step 3: Extract and Decrypt the File
-Use Decryption.ipynb to extract the hidden encrypted file from stego_image.png.
-After extraction, the file is decrypted using the key stored in key.key.
+Technologies Used
+Python: The primary language used for the implementation.
+Cryptography: For encrypting and decrypting files.
+Steganography: For hiding encrypted files inside images.
+Jupyter Notebooks: For demonstrating the encryption and decryption process interactively.
+Pillow: Python Imaging Library (PIL) for working with images in the steganography process.
 
 Example Workflow:
-Encrypt the file using Encryption.ipynb.
-Embed the encrypted file into carrier.png to create stego_image.png.
-Extract the encrypted file from stego_image.png using Decryption.ipynb.
-Decrypt the file using the key key.key.
+Encrypt the file:
+The secret.docx file is encrypted using the provided key and embedded into the carrier.png image.
+The resulting stego_image.png contains the encrypted file, hidden in plain sight.
+Decrypt the file:
+The stego_image.png is uploaded into the decryption notebook, and the key.key is used to decrypt and extract the original file.
+The original secret.docx file is restored.
 
-Notes:
-The project demonstrates the combination of encryption and steganography for secure file sharing.
-The file size of the embedded data should be smaller than the capacity of the image used for steganography. Larger files may result in perceptible changes to the cover image.
-This project does not perform any advanced error handling or validation, so ensure that the image and file sizes are compatible.
+File Structure:
+steganography-secure-file-sharing/
+│
+├── Decryption.ipynb         # Jupyter notebook for extracting and decrypting files
+├── Encryption (1).ipynb     # Jupyter notebook for encrypting and hiding files
+├── carrier.png              # Cover image used to hide the encrypted file
+├── extracted_file           # The decrypted file after extraction
+├── key.key                  # Encryption key used for file encryption and decryption
+├── secret.docx              # Sample document file to be encrypted and hidden
+├── stego_image.png          # Image with the hidden encrypted file
+├── requirements.txt         # Python dependencies
+├── README.md                # Documentation
+└── LICENSE                  # License information
 
 Contributing:
 Feel free to fork the repository and submit issues or pull requests for improvements.
 
-License:
-This project is licensed under the MIT License - see the LICENSE file for details.
+License
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
