@@ -1,4 +1,4 @@
-Steganography and Encryption for Secure File Sharing
+#Steganography and Encryption for Secure File Sharing
 
 Overview
 This project demonstrates the use of encryption and steganography to securely share files. The process involves encrypting a file, embedding it inside a cover image (steganography), and then securely extracting and decrypting it. The project uses Python libraries to handle both encryption and steganography, allowing users to send and receive encrypted files hidden inside an image.
