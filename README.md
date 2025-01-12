@@ -62,21 +62,3 @@ Using Python libraries, this project simplifies the process of securely hiding a
    ```bash
    pip install -r requirements.txt
    ```
-
-### **Usage**
-- Open the Jupyter Notebooks `Encryption (1).ipynb` and `Decryption.ipynb` to interact with the encryption and decryption workflows.
-
----
-
-## Contributing
-Contributions are welcome! Feel free to fork the repository, submit issues, or create pull requests for enhancements.
-
----
-
-## License
-This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE) file for more details.
-
----
-
-Let me know if you'd like further modifications or enhancements!
-
